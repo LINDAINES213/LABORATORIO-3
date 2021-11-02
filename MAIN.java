@@ -5,7 +5,8 @@ public class MAIN{
        // Archivo archivo = new Archivo();
 
         int opcion = 0;
-        int opcionp = 0;
+        int opcion2 = 0;
+        int opcion3 = 0;
 
         while(opcion != 3){
 
@@ -13,11 +14,16 @@ public class MAIN{
 
             if (opcion == 1){
 
-                //vista.nuevaRAM();
+                vista.menuPublicar();
+                if (opcion2 == 1){
+                    vista.menuMultimedia();
+                    if(opcion3 == 1){
+
+                    }
+                }
 
             } else if (opcion == 2){
 
-               // vista.datosRAM();
 
             } else if (opcion == 3){
 

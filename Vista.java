@@ -29,6 +29,34 @@ public class Vista {
             return opcion;
     }
 
+    public int menuPublicar(){
+        int opcion2;
+
+        String menuPublicar = "\nQue deseas publicar?\n" +
+                                "1. Multimedia\n" +
+                                "2. Texto\n" +
+                                "3. Emoticon\n";
+        
+        System.out.println(menuPublicar);
+        opcion2 = sn.nextInt();
+
+        return opcion2;
+    }
+
+    public int menuMultimedia(){
+        int opcion3;
+
+        String menuMultimedia = "\nQue deseas publicar?\n" +
+                                "1. Foto\n" +
+                                "2. Video\n" +
+                                "3. Audio\n";
+        
+        System.out.println(menuMultimedia);
+        opcion3 = sn.nextInt();
+
+        return opcion3;
+    }
+
     public String mensajeDespedida(){
         String mensajedespedida = "\n------------ Gracias por usar la app! ------------\n------------ Vuelve proto! ------------\n";
         System.out.println(mensajedespedida);

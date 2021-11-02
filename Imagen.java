@@ -18,7 +18,4 @@ public class Imagen extends Multimedia {
     public void setFormato(String formato) {
         this.formato = formato;
     }
-    
-    
-
 }

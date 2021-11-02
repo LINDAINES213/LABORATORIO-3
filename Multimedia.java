@@ -1,13 +1,14 @@
 public class Multimedia extends Post {
 
     protected String URL;
-    protected String tamano;
+    protected int tamano;
+
 
     public String getURL(){
         return URL;
     }
 
-    public String getTamano(){
+    public int getTamano(){
         return tamano;
     }
 
@@ -15,7 +16,7 @@ public class Multimedia extends Post {
         this.URL = URL;
     }
 
-    public void setTamano(String tamano){
+    public void setTamano(int tamano){
         this.tamano = tamano;
     }   
 }

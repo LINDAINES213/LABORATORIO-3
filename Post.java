@@ -1,14 +1,13 @@
+import java.util.Scanner;
+
 public class Post {
 
-    protected String tipo;
     protected String autor;
     protected String fecha;
     protected int likes;
     protected String [] comentarios;
+    Scanner sn = new Scanner(System.in);
 
-    public String getTipo() {
-        return tipo;
-    }
     
     public String getAutor(){
         return autor;
@@ -16,10 +15,6 @@ public class Post {
 
     public String getFecha(){
         return fecha;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
     }
 
     public void setAutor(String autor){
@@ -30,7 +25,7 @@ public class Post {
         this.fecha = fecha;
     }
 
-    public void setLikes(String likes){
+    public void setLikes(int likes){
         this.likes += 1;
 
     }

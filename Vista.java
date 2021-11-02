@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.time.LocalTime;
 
 public class Vista {
 
@@ -20,8 +19,9 @@ public class Vista {
             System.out.println("\n---------------------------------------------------------------------------------------------------------------------");
     
             String menu =   "\n1. Publicar un Post\n" +
-                            "2. Buscar un Post\n" +
-                            "3. Salir de la app\n";
+                            "2. Ver Posts\n" +
+                            "3. Buscar un Post\n" +
+                            "4. Salir de la app\n";
     
             System.out.println(menu);
             opcion =  sn.nextInt();
@@ -30,6 +30,7 @@ public class Vista {
     }
 
     public int menuPublicar(){
+        
         int opcion2;
 
         String menuPublicar = "\nQue deseas publicar?\n" +
@@ -56,6 +57,21 @@ public class Vista {
 
         return opcion3;
     }
+
+    public int menuReaccion(){
+        
+        int opcion4;
+
+        String menuReaccion = "\nDeseas reaccionar a alguna publicacion?\n" +
+                                "1. Dar Like\n" +
+                                "2. Comentar\n";
+        
+        System.out.println(menuReaccion);
+        opcion4 = sn.nextInt();
+
+        return opcion4;
+    }
+
 
     public String mensajeDespedida(){
         String mensajedespedida = "\n------------ Gracias por usar la app! ------------\n------------ Vuelve proto! ------------\n";

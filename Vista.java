@@ -3,9 +3,8 @@ import java.util.Scanner;
 public class Vista {
 
     Scanner sn = new Scanner(System.in);
-    //Archivo archivo = new Archivo();
     
-    public int menu(){
+    public int menuPrincipal(){
 
             int opcion;
 
@@ -18,12 +17,12 @@ public class Vista {
             System.out.println("Hora de Empezar! Que deseas realizar?");
             System.out.println("\n---------------------------------------------------------------------------------------------------------------------");
     
-            String menu =   "\n1. Publicar un Post\n" +
+            String menuPrincipal =   "\n1. Publicar un Post\n" +
                             "2. Ver Posts\n" +
                             "3. Buscar un Post\n" +
                             "4. Salir de la app\n";
     
-            System.out.println(menu);
+            System.out.println(menuPrincipal);
             opcion =  sn.nextInt();
     
             return opcion;
@@ -46,7 +45,7 @@ public class Vista {
 
     public int menuMultimedia(){
         int opcion3;
-
+        
         String menuMultimedia = "\nQue deseas publicar?\n" +
                                 "1. Foto\n" +
                                 "2. Video\n" +
@@ -64,7 +63,8 @@ public class Vista {
 
         String menuReaccion = "\nDeseas reaccionar a alguna publicacion?\n" +
                                 "1. Dar Like\n" +
-                                "2. Comentar\n";
+                                "2. Comentar\n" +
+                                "3. Regresar al menu principal\n";
         
         System.out.println(menuReaccion);
         opcion4 = sn.nextInt();
@@ -72,9 +72,8 @@ public class Vista {
         return opcion4;
     }
 
-
     public String mensajeDespedida(){
-        String mensajedespedida = "\n------------ Gracias por usar la app! ------------\n------------ Vuelve proto! ------------\n";
+        String mensajedespedida = "\n------------ Gracias por usar la app! Vuelve Pronto!------------";
         System.out.println(mensajedespedida);
         return mensajedespedida;
     }

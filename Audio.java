@@ -18,5 +18,4 @@ public class Audio extends Multimedia{
     public void setBitDepth(int bitdepth) {
         this.bitdepth = bitdepth;
     }
-    
 }

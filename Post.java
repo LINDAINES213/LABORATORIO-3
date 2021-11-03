@@ -4,8 +4,9 @@ public class Post {
 
     protected String autor;
     protected String fecha;
-    protected int likes;
+    protected int likes = 0;
     protected String [] comentarios;
+    protected String hashtags;
     Scanner sn = new Scanner(System.in);
 
     
@@ -17,6 +18,14 @@ public class Post {
         return fecha;
     }
 
+    public String getHashtags(){
+        return hashtags;
+    }
+
+    public int getLikes(){
+        return this.likes;
+    }
+
     public void setAutor(String autor){
         this.autor = autor;
     }
@@ -25,15 +34,19 @@ public class Post {
         this.fecha = fecha;
     }
 
+    public void setHashtags(String hashtags){
+        this.hashtags = hashtags;
+    }
+
     public void setLikes(int likes){
-        this.likes += 1;
+        this.likes = likes;
 
     }
 
-    public int getLikes(){
+    public int darLike(){
+        this.likes++;
         return this.likes;
     }
-    
     /*public String[] comentarios(){
         String[] comentarios = new String[];
         return comentarios;

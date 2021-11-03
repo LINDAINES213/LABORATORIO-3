@@ -1,15 +1,28 @@
+/**
+ * Esta clase es el controlador del programa.
+ * @author: Linda Ines Jimenez Vides
+ * @version: 2 - noviembre - 2021
+ */
 public class MAIN{
     public static void main(String[] args){
 
+        //Objeto tipo vista
         Vista vista = new Vista();
+        //Objeto tipo publicacion
         Publicacion publicacion = new Publicacion();
+        //Objeto tipo post
         Post post = new Post();
 
         int opcion = 0;
         int opcion2 = 0;
         int opcion3 = 0;
         int opcion4 = 0;
-
+        
+        /**
+         * Esta clase es el controlador del programa.
+         * @author: Linda Ines Jimenez Vides
+         * @version: 2 - noviembre - 2021
+         */
         while (opcion != 4){
 
             opcion = vista.menuPrincipal();
@@ -52,7 +65,7 @@ public class MAIN{
             } else if (opcion == 2){
 
                 publicacion.imprimirPosts();
-                System.out.println("Si desea dar like o comentar la publicacion, busquela por medio de su fecha depublicacion o hashtag");
+                System.out.println("\nSi desea dar like o comentar la publicacion, busquela por medio de su fecha depublicacion o hashtag\n");
 
 
             } else if (opcion == 3){

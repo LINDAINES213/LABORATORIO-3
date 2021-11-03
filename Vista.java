@@ -1,9 +1,20 @@
 import java.util.Scanner;
 
+/**
+ * Esta clase es la vista del programa.
+ * @author: Linda Ines Jimenez Vides
+ * @version: 2 - noviembre - 2021
+ */
 public class Vista {
 
+    //Obteto tipo scanner
     Scanner sn = new Scanner(System.in);
     
+    /**
+     * Metodo para imprimir el menu principal
+     * @author: Linda Ines Jimenez Vides
+     * @version: 2 - noviembre - 2021
+     */
     public int menuPrincipal(){
 
             int opcion;
@@ -28,6 +39,11 @@ public class Vista {
             return opcion;
     }
 
+    /**
+     * Metodo para imprimir el menu para hacer una publicacion
+     * @author: Linda Ines Jimenez Vides
+     * @version: 2 - noviembre - 2021
+     */
     public int menuPublicar(){
         
         int opcion2;
@@ -43,6 +59,11 @@ public class Vista {
         return opcion2;
     }
 
+    /**
+     * Metodo para imprimir el menu para publicar multimedia
+     * @author: Linda Ines Jimenez Vides
+     * @version: 2 - noviembre - 2021
+     */
     public int menuMultimedia(){
         int opcion3;
         
@@ -57,6 +78,11 @@ public class Vista {
         return opcion3;
     }
 
+    /**
+     * Metodo para imprimir el menu para reaccionar o comentar una publicacion
+     * @author: Linda Ines Jimenez Vides
+     * @version: 2 - noviembre - 2021
+     */
     public int menuReaccion(){
         
         int opcion4;
@@ -72,6 +98,11 @@ public class Vista {
         return opcion4;
     }
 
+    /**
+     * Imprime el mensaje de despedida
+     * @author: Linda Ines Jimenez Vides
+     * @version: 2 - noviembre - 2021
+     */
     public String mensajeDespedida(){
         String mensajedespedida = "\n------------ Gracias por usar la app! Vuelve Pronto!------------";
         System.out.println(mensajedespedida);

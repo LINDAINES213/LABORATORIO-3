@@ -1,3 +1,8 @@
+/**
+ * Esta clase hereddada de multimedia contiene getters y setters del objeto tipo video
+ * @author: Linda Ines Jimenez Vides
+ * @version: 2 - noviembre - 2021
+ */
 public class Video extends Multimedia {
     
     private int fps;

@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+/**
+ * Esta clase contiene getters y setters del objeto tipo post
+ * @author: Linda Ines Jimenez Vides
+ * @version: 2 - noviembre - 2021
+ */
 public class Post {
 
     protected String autor;
@@ -7,6 +12,7 @@ public class Post {
     protected int likes = 0;
     protected String [] comentarios;
     protected String hashtags;
+    //Objeto tipo scanner
     Scanner sn = new Scanner(System.in);
 
     
@@ -47,6 +53,7 @@ public class Post {
         this.likes++;
         return this.likes;
     }
+    
     /*public String[] comentarios(){
         String[] comentarios = new String[];
         return comentarios;

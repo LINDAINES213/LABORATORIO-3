@@ -5,21 +5,34 @@ import java.io.FileReader;
 import java.io.BufferedReader;
 import java.util.NoSuchElementException;
 
+/**
+ * Esta clase contiene metodos para guardar las publicaciones en un archivo txt.
+ * @author: Linda Ines Jimenez Vides
+ * @version: 2 - noviembre - 2021
+ */
 public class Publicacion {
 
+    //Objeto tipo scanner
     Scanner sn = new Scanner(System.in);
+    //Objeto tipo imagen
     Imagen imagen = new Imagen();
+    //Objeto tipo video
     Video video = new Video();
+    //Objeto tipo audio
     Audio audio = new Audio();
+    //Objeto tipo texto
     Texto texto = new Texto();
+    //Objeto tipo emoticon
     Emoticon emoticon = new Emoticon();
+    //Objeto tipo post
     Post post = new Post();
-
     //Objeto File que crea o abre acceso al archivo txt
     File Publicaciones = new File("Publicaciones.txt");
     
    /**
-    * Metodo para que el usuario ingrese la infromacion necesaria, y esta sea guardada en el archivo txt
+    * Metodo para que el usuario ingrese la infromacion necesaria para publicar una imagen, y esta sea guardada en el archivo txt
+    * @author: Linda Ines Jimenez Vides
+    * @version: 2 - noviembre - 2021
     */ 
    public void publicarImagen(){
 
@@ -61,7 +74,9 @@ public class Publicacion {
     }
 
     /**
-    * Metodo para que el usuario ingrese la infromacion necesaria, y esta sea guardada en el archivo txt
+    * Metodo para que el usuario ingrese la infromacion necesaria para publicar un video, y esta sea guardada en el archivo txt
+    * @author: Linda Ines Jimenez Vides
+    * @version: 2 - noviembre - 2021
     */ 
    public void publicarVideo(){
 
@@ -101,7 +116,9 @@ public class Publicacion {
     }
 
     /**
-    * Metodo para que el usuario ingrese la infromacion necesaria, y esta sea guardada en el archivo txt
+    * Metodo para que el usuario ingrese la infromacion necesaria para publicar un audio, y esta sea guardada en el archivo txt
+    * @author: Linda Ines Jimenez Vides
+    * @version: 2 - noviembre - 2021
     */ 
     public void publicarAudios(){
 
@@ -143,8 +160,10 @@ public class Publicacion {
         }
     }
 
-    /**
-    * Metodo para que el usuario ingrese la infromacion necesaria, y esta sea guardada en el archivo txt
+   /**
+    * Metodo para que el usuario ingrese la infromacion necesaria para publicar texto, y esta sea guardada en el archivo txt
+    * @author: Linda Ines Jimenez Vides
+    * @version: 2 - noviembre - 2021
     */ 
     public void publicarTexto(){
 
@@ -177,6 +196,11 @@ public class Publicacion {
         }
     }
 
+    /**
+    * Metodo para que el usuario ingrese la infromacion necesaria para publicar un emoticon, y esta sea guardada en el archivo txt
+    * @author: Linda Ines Jimenez Vides
+    * @version: 2 - noviembre - 2021
+    */ 
     public void publicarEmoticon(){
 
         try {
@@ -208,6 +232,11 @@ public class Publicacion {
         }
     }
 
+    /**
+    * Metodo para imprimir el contenido (publicaciones) del archivo txt
+    * @author: Linda Ines Jimenez Vides
+    * @version: 2 - noviembre - 2021
+    */ 
     public void imprimirPosts(){
 
         String contenido = " ";
@@ -230,13 +259,17 @@ public class Publicacion {
         }
     }
 
+    /**
+    * Metodo para que el usuario busque una publicacion por fecha o hashtag
+    * @author: Linda Ines Jimenez Vides
+    * @version: 2 - noviembre - 2021
+    */ 
     public void BuscarPost(){
 
         Scanner sc;
         String contenido = " ";
         boolean contains = false;
         String fechaOhashtags;
-
     
         try {
             
@@ -245,15 +278,11 @@ public class Publicacion {
             fechaOhashtags = sn.nextLine();
 
             FileReader leer = new FileReader("Publicaciones.txt");
-
-            //El contenido de lector se guarda en un BufferedReader
             BufferedReader posts = new BufferedReader(leer);
 
-            //ystem.out.println("Texto a buscar: " + texto);
-             //mientras no se llegue al final del fichero
              while(sc.hasNext()){   
-                contenido = sc.nextLine();  //se lee una línea
-                if (contenido.contains(fechaOhashtags)) {   //si la línea contiene el texto buscado se muestra por pantalla         
+                contenido = sc.nextLine();
+                if (contenido.contains(fechaOhashtags)) {        
                     System.out.println("\n" + contenido);
                     contenido = sc.nextLine(); 
                     System.out.println(contenido);
@@ -263,17 +292,15 @@ public class Publicacion {
                     System.out.println(contenido);
                     contains = true;
                 }
-            }
-            
-            if(!contains){ //si el archivo no contienen el texto se muestra un mensaje indicándolo
+            } if (!contains){
 
-                System.out.println("\nNo hay ninguna publicacion en esa fecha\n");
+                System.out.println("\nNo hay ninguna publicacion en esa fecha o hashtag\n");
             }
 
         } catch (NoSuchElementException e) {
             System.out.println("\nBUSQUEDA FINALIZADA\n");
 
-        } catch(Exception e) { 
+        } catch (Exception e) { 
             System.out.println("\nERROR EN LA CARGA DE PUBLICACIONES\n");
         }
     }

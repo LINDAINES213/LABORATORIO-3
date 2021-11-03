@@ -1,3 +1,8 @@
+/**
+ * Esta clase hereddada de post contiene getters y setters del objeto tipo multimedia
+ * @author: Linda Ines Jimenez Vides
+ * @version: 2 - noviembre - 2021
+ */
 public class Multimedia extends Post {
 
     protected String URL;
